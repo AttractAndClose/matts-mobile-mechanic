@@ -1,0 +1,55 @@
+---
+import { MapPin } from '@lucide/astro';
+
+const cities = [
+  "Phoenix", "Scottsdale", "Tempe", "Mesa", "Gilbert", 
+  "Peoria", "Glendale", "Surprise", "Chandler", "Avondale",
+  "Goodyear", "Buckeye", "Paradise Valley", "Cave Creek", "Carefree"
+];
+---
+
+<section id="areas" class="py-24 bg-brand-grey">
+  <div class="container mx-auto px-6 md:px-12">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      
+      <div class="lg:w-1/2">
+        <div class="inline-block bg-brand-orange/10 text-brand-orange px-4 py-1 rounded text-sm font-bold mb-4">SERVING THE ENTIRE VALLEY</div>
+        <h2 class="text-4xl md:text-5xl font-black mb-8">Where We <span class="text-brand-orange">Operate</span></h2>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+          Matt's Mobile Mechanic brings the shop to you across the entire Greater Phoenix area. Whether you're stranded at home in Peoria or need fleet service in Gilbert, we’ve got you covered.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6">
+          {cities.map(city => (
+            <div class="flex items-center gap-2 text-brand-black">
+              <div class="w-2 h-2 rounded-full bg-brand-orange"></div>
+              <span class="font-medium">{city}</span>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-12 p-6 bg-white border-l-4 border-brand-orange rounded-r-xl shadow-lg">
+          <p class="font-bold text-xl mb-1 flex items-center gap-2">
+            <MapPin class="text-brand-orange" />
+            No Travel Fees for most areas!
+          </p>
+          <p class="text-gray-600">Give us a call to confirm your location and get a technician dispatched.</p>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 w-full aspect-square bg-brand-black rounded-3xl relative overflow-hidden flex items-center justify-center p-8">
+        <!-- Visual "Map" representation using CSS -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:30px_30px]"></div>
+        <div class="relative text-center">
+          <div class="text-brand-orange mb-4">
+             <MapPin size={80} class="mx-auto animate-bounce" />
+          </div>
+          <div class="text-7xl font-black text-white/10 uppercase select-none">PHOENIX</div>
+          <div class="mt-4 text-brand-white text-2xl font-bold">GREATER PHOENIX AREA</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

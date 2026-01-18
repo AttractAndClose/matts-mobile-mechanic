@@ -1,0 +1,45 @@
+---
+import { Phone, MessageSquare, ShieldCheck } from '@lucide/astro';
+---
+
+<section class="relative bg-brand-black text-brand-white py-20 md:py-32 overflow-hidden">
+  <!-- Subtle Background Pattern -->
+  <div class="absolute inset-0 opacity-10 pointer-events-none">
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--color-brand-orange)_0%,_transparent_70%)] opacity-20"></div>
+  </div>
+
+  <div class="container mx-auto px-6 md:px-12 relative z-10">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 text-brand-orange px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+        <ShieldCheck size={16} />
+        <span>Certified & Insured Professionals</span>
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Quality Mechanic Services<br />
+        <span class="text-brand-orange">At Your Doorstep.</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-brand-grey mb-4 leading-relaxed">
+        Expert residential and commercial fleet repairs.<br />
+        No more waiting at the shop—we come to you.
+      </p>
+
+      <p class="text-lg text-brand-orange font-semibold mb-10">
+        Serving the Greater Phoenix Area
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:5551234567" class="bg-brand-orange text-brand-white text-lg font-bold px-10 py-5 rounded-xl flex items-center justify-center gap-3 hover:bg-white hover:text-brand-black transition-all transform hover:-translate-y-1 shadow-xl shadow-brand-orange/20">
+          <Phone size={24} />
+          Call Now (555) 123-4567
+        </a>
+
+        <a href="sms:5551234567?body=Hi%20Matt,%20I%20need%20a%20mechanic%20quote%20for%20my%20[Vehicle%20Year/Make/Model]." class="sm:hidden bg-transparent border-2 border-brand-white/20 text-brand-white text-lg font-bold px-10 py-5 rounded-xl flex items-center justify-center gap-3 hover:bg-brand-white hover:text-brand-black transition-all transform hover:-translate-y-1">
+          <MessageSquare size={24} />
+          Text for a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+---
+import { Wrench, Gauge, Battery, Disc, Truck, PenTool as Tool } from '@lucide/astro';
+
+const services = [
+  {
+    title: "Diagnostics",
+    desc: "Check engine light? Strange noise? We provide full computerized diagnostics for all makes and models.",
+    icon: Gauge
+  },
+  {
+    title: "Brakes & Suspension",
+    desc: "Complete brake pad replacement, rotors, shocks, and suspension repair at your home or office.",
+    icon: Disc
+  },
+  {
+    title: "Oil & Fluids",
+    desc: "Mobile oil changes, coolant flushes, and transmission fluid service without the dealership markup.",
+    icon: Wrench
+  },
+  {
+    title: "Battery & Electrical",
+    desc: "Dead battery? Alternator or starter issues? We test and replace on-site to get you moving fast.",
+    icon: Battery
+  },
+  {
+    title: "Commercial Fleets",
+    desc: "Keep your business running. We manage preventative maintenance and repairs for your entire fleet.",
+    icon: Truck
+  },
+  {
+    title: "AC & Heating",
+    desc: "Survive the Phoenix heat with our mobile AC recharge, compressor repair, and HVAC diagnostics.",
+    icon: Tool
+  }
+];
+---
+
+<section id="services" class="py-24 bg-brand-white">
+  <div class="container mx-auto px-6 md:px-12">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Expert Services <span class="text-brand-orange">We Provide</span></h2>
+      <p class="text-lg text-gray-600">From luxury sedans to heavy-duty commercial trucks, our certified mechanics handle it all right in your driveway.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div class="group p-8 rounded-2xl bg-brand-grey border-2 border-transparent hover:border-brand-orange/20 transition-all hover:shadow-2xl hover:shadow-brand-orange/5 bg-white">
+          <div class="w-14 h-14 bg-brand-black text-brand-orange rounded-xl grid place-items-center mb-6 group-hover:scale-110 transition-transform">
+            <service.icon size={28} />
+          </div>
+          <h3 class="text-2xl font-bold mb-3">{service.title}</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
+          <a href="tel:5551234567" class="inline-flex items-center font-bold text-brand-orange hover:underline gap-1">
+            Book this service →
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 bg-brand-black text-white p-10 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h3 class="text-3xl font-black mb-2">Need something else?</h3>
+        <p class="text-brand-grey opacity-80 italic">We work on all years, makes, and models including exotic and vintage vehicles.</p>
+      </div>
+      <a href="tel:5551234567" class="bg-brand-orange text-white px-8 py-4 rounded-xl font-black uppercase tracking-wider hover:scale-105 transition-transform">
+        Ask a Question
+      </a>
+    </div>
+  </div>
+</section>
