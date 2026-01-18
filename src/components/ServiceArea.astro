@@ -32,22 +32,24 @@ const cities = [
         <div class="mt-12 p-6 bg-white border-l-4 border-brand-orange rounded-r-xl shadow-lg">
           <p class="font-bold text-xl mb-1 flex items-center gap-2">
             <MapPin class="text-brand-orange" />
-            No Travel Fees for most areas!
+            No Travel Fees!
           </p>
           <p class="text-gray-600">Give us a call to confirm your location and get a technician dispatched.</p>
         </div>
       </div>
 
-      <div class="lg:w-1/2 w-full aspect-square bg-brand-black rounded-3xl relative overflow-hidden flex items-center justify-center p-8">
-        <!-- Visual "Map" representation using CSS -->
-        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:30px_30px]"></div>
-        <div class="relative text-center">
-          <div class="text-brand-orange mb-4">
-             <MapPin size={80} class="mx-auto animate-bounce" />
-          </div>
-          <div class="text-7xl font-black text-white/10 uppercase select-none">PHOENIX</div>
-          <div class="mt-4 text-brand-white text-2xl font-bold">GREATER PHOENIX AREA</div>
-        </div>
+      <div class="lg:w-1/2 w-full aspect-square rounded-3xl overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d425345.0295639492!2d-112.07404!3d33.4484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Greater Phoenix Area Service Map"
+          class="rounded-3xl"
+        ></iframe>
       </div>
 
     </div>
