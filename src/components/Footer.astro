@@ -1,5 +1,5 @@
 ---
-import { Phone, MessageSquare, Mail, Instagram, Facebook } from '@lucide/astro';
+import { Phone, MessageSquare, Mail } from '@lucide/astro';
 ---
 
 <footer class="bg-brand-black text-brand-white pt-20 pb-10">
@@ -8,20 +8,12 @@ import { Phone, MessageSquare, Mail, Instagram, Facebook } from '@lucide/astro';
       
       <!-- Brand & Info -->
       <div class="col-span-1 lg:col-span-1">
-        <a href="/" class="text-2xl font-black tracking-tighter text-brand-white mb-6 block">
-          MATT'S<span class="text-brand-orange">MOBILE</span>
+        <a href="/" class="mb-6 block">
+          <img src="/logo.jpg" alt="Matt's Mobile Mechanic" class="h-12" />
         </a>
-        <p class="text-brand-grey/60 mb-6 leading-relaxed">
-          The \#1 mobile mechanic service in Phoenix. Providing dealership-quality repairs with the convenience of on-site service.
+        <p class="text-brand-grey/60 leading-relaxed">
+          The #1 mobile mechanic service in Phoenix. Providing dealership-quality repairs with the convenience of on-site service.
         </p>
-        <div class="flex gap-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">
-            <Instagram size={20} />
-          </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors">
-            <Facebook size={20} />
-          </a>
-        </div>
       </div>
 
       <!-- Services List -->
